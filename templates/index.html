@@ -1,0 +1,54 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home - Meu Projeto{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">🎉 Bem-vindo ao Meu Projeto Django!</h1>
+    <p class="lead">Projeto criado para aprender Django de forma prática e gradual.</p>
+    
+    <hr class="my-4">
+    
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">🚀 Comece Aqui</h5>
+                    <p class="card-text">Acesse o painel admin para gerenciar dados.</p>
+                    <a href="/admin/" class="btn btn-primary">Painel Admin</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">📁 App Core</h5>
+                    <p class="card-text">Veja o primeiro app do projeto.</p>
+                    <a href="/core/" class="btn btn-secondary">Acessar Core</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">📖 Sobre</h5>
+                    <p class="card-text">Conheça mais sobre este projeto.</p>
+                    <a href="/core/sobre/" class="btn btn-info">Ver Sobre</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-5 alert alert-info">
+        <h4>📊 Informações do Sistema:</h4>
+        <ul class="list-unstyled">
+            <li><strong>Django:</strong> {{ django_version }}</li>
+            <li><strong>Python:</strong> {{ python_version }}</li>
+            <li><strong>Data/Hora:</strong> {% now "d/m/Y H:i:s" %}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

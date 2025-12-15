@@ -1,0 +1,31 @@
+<!-- core/templates/core/sobre.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>📖 Sobre o Projeto</h1>
+    
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Projeto: {{ projeto }}</h5>
+            <p class="card-text">Desenvolvido por: {{ autor }}</p>
+            <p class="card-text">Ano: {{ ano }}</p>
+            
+            <h6>Tecnologias utilizadas:</h6>
+            <ul>
+                {% for tech in tecnologias %}
+                    <li>{{ tech }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <h4>Objetivos:</h4>
+        <p>Este projeto foi criado para aprender Django de forma prática,
+        começando simples e adicionando funcionalidades gradualmente.</p>
+    </div>
+    
+    <a href="/" class="btn btn-primary mt-4">← Voltar para Home</a>
+</div>
+{% endblock %}
