@@ -2,7 +2,6 @@
 
 Projeto Django criado para aprendizado prático e progressivo do framework.
 
-
 ## Estrutura do Projeto
 meuprojeto/
 ├── core/ # App principal do projeto
